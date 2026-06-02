@@ -78,3 +78,21 @@
     justify-content: center;
     align-items: center;
 }
+
+.shop-banner h1 {
+    font-size: clamp(0.8rem, 2vw, 2.4rem);
+}
+
+.counter{
+    position: absolute;
+    background-color: rgb(221, 191, 109);
+    width: 45%;
+    height:45%;
+    bottom: 5%;
+    left: 6%;
+    z-index: 3;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
