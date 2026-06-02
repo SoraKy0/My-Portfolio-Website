@@ -139,3 +139,27 @@ body {
     height: 4%;
     bottom: 0%;
 }
+
+.light-wire{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    width: 0.35%;
+    height: 4%;
+    top: 0%;
+    left: 55%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.light {
+    position: absolute;
+    width: clamp(10px, 3.5vw, 60px);
+    height: 0;
+    border-left: clamp(10px, 3.5vw, 55px) solid transparent;
+    border-right: clamp(8px, 3.5vw, 55px) solid transparent;
+    border-bottom: clamp(10px, 4.5vw, 40px) solid rgb(255, 139, 6);
+    top: 4%;
+    left: 55%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
