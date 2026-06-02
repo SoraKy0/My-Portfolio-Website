@@ -24,7 +24,7 @@
     height: 100%;
     background-color: rgb(148, 122, 88);
     position: absolute;
-    z-index: -1;
+    z-index: 1;
 }
 
 .left-wall {
@@ -63,4 +63,18 @@
     height: 3%;
     background-color: rgb(77, 76, 76);
     z-index: 3;
+}
+
+.shop-banner{
+    position: absolute;
+    background-color: rgb(187, 121, 60);
+    left: 7.5%;
+    top: 2.5%;
+    width: 40%;
+    height:20%;
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
