@@ -89,6 +89,28 @@ body {
     font-size: clamp(0.8rem, 2vw, 2.4rem);
 }
 
+.banner-rope-one{
+    position: absolute;
+    background-color: rgb(243, 162, 41);
+    width: 0.35%;
+    height: 2.6%;
+    top: 0%;
+    left: 10%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.banner-rope-two{
+    position: absolute;
+    background-color: rgb(243, 162, 41);
+    width: 0.35%;
+    height: 2.6%;
+    top: 0%;
+    left: 45%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
 .counter{
     position: absolute;
     background-color: rgb(221, 191, 109);
@@ -148,7 +170,7 @@ body {
     top: 0%;
     left: 55%;
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 3;
 }
 
 .light {
@@ -161,5 +183,5 @@ body {
     top: 4%;
     left: 55%;
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 3;
 }
