@@ -1,11 +1,30 @@
 body {
     margin: 0;
+    background-color: skyblue;
 }
+
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+.sun {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    width: clamp(90px, 20vw, 180px);
+    height: clamp(90px, 20vw, 180px);
+    background-color: rgb(255, 123, 0);
+    border-radius: 50%;
+}
+
+
 
 .shop{
     display: flex;
     flex-direction: column; 
-    justify-content: center; /*align on main axis*/
+    justify-content: flex-end; /*align on main axis*/
     align-items: center; /*align on cross axis*/
 
     min-height: 100vh;
