@@ -116,11 +116,9 @@ body {
 
 .lantern {
     position: absolute;
-    bottom: 0; /* Aligns perfectly with the bottom of the shop body */
+    bottom: 2.2vh;
     
-    /* Pushes the lantern outside the left wall of the shop */
-    /* Adjust the -12% or -120px to get the exact distance you prefer */
-    left: clamp(-120px, -12%, -70px); 
+    left: clamp(-130px, -22%, -80px); 
     
     width: clamp(60px, 8vw, 110px);
     height: clamp(280px, 35vh, 400px);
