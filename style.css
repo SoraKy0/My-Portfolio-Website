@@ -104,13 +104,99 @@ body {
     z-index: 2;
 }
 
-.rock-floor{
-    position: absolute;
+.rock-floor {
+    position: fixed;
     bottom: 0;
-    width:100%;
-    height: 3%;
+    left: 0;
+    width: 100vw;
+    height: 2.2vh;
     background-color: rgb(77, 76, 76);
-    z-index: 3;
+    z-index: 4;
+}
+
+.lantern {
+    position: absolute;
+    bottom: 0; /* Aligns perfectly with the bottom of the shop body */
+    
+    /* Pushes the lantern outside the left wall of the shop */
+    /* Adjust the -12% or -120px to get the exact distance you prefer */
+    left: clamp(-120px, -12%, -70px); 
+    
+    width: clamp(60px, 8vw, 110px);
+    height: clamp(280px, 35vh, 400px);
+    z-index: 10;
+}
+
+.wood-base {
+    position: absolute;
+    background-color: rgb(92, 58, 26);
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+}
+
+.wood-base-small {
+    position: absolute;
+    background-color: rgb(104, 66, 30);
+    bottom: 10%;
+    width: 70%;
+    height: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.wood-column {
+    position: absolute;
+    background-color: rgb(122, 77, 35);
+    bottom: 17%;
+    width: 20%;
+    height: 53%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.lamp {
+    position: absolute;
+    width: 75%;
+    height: 22%;
+    background-color: rgb(255, 175, 3);
+    bottom: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cross-beam-vertical {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 70%;
+    background: rgb(80, 50, 20);
+    width: clamp(4px, 0.8vw, 8px);
+    height: 22%;
+    z-index: 2;
+}
+
+.cross-beam-horizonal {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 80%;
+    background: rgb(80, 50, 20);
+    width: 75%;
+    height: clamp(4px, 0.8vw, 8px);
+    z-index: 2;
+}
+
+.lamp-roof {
+    position: absolute;
+    bottom: 92%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    height: 0;
+    border-left: clamp(8px, 1vw, 15px) solid transparent;
+    border-right: clamp(8px, 1vw, 15px) solid transparent;
+    border-bottom: clamp(12px, 2vw, 22px) solid rgb(60, 40, 20);
 }
 
 .shop-banner{
@@ -248,3 +334,4 @@ body {
     transform: translateX(-50%);
     z-index: 3;
 }
+
