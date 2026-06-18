@@ -474,8 +474,11 @@ body {
 
 .under-shelf-wall{
     position: absolute;
-    background-color: rgb(71, 67, 62);
-    background: url(textures/3px-tile.png);
+
+    background-color: rgb(59, 59, 59);
+
+    background-image: url(textures/concrete-wall-3.png); 
+    background-size: 300px; 
 
     width: 30%;
     height: 30%;
