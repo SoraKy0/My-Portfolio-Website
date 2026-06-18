@@ -127,7 +127,6 @@ body {
     width: clamp(250px, 80vw, 1400px);
     height: clamp(450px, 76vh, 800px);
     position: relative;
-    overflow: hidden; 
 }
 
 .back-wall{
@@ -156,7 +155,6 @@ body {
         );
     background-size: 200px;
     z-index: 3;
-    overflow: hidden; 
 }
 
 .right-wall {
@@ -176,7 +174,6 @@ body {
         );
     background-size: 200px;
     z-index: 3;
-    overflow: hidden; 
 }
 
 .floor{
@@ -354,8 +351,26 @@ body {
     right: 6%;
     width: 30%;
     height: 65%;
-    background-color: rgb(150, 91, 47);
     z-index: 3;
+    overflow: hidden;
+}
+
+/*Understand how the before/after and all other stuff works*/
+.projects-shelf::before {
+    content: "";
+    position: absolute;
+
+    top: -1500px;
+    left: -1500px;
+
+    width: 4000px;
+    height: 4000px;
+    
+    background-color: rgb(95, 48, 12);
+    background-image: url(textures/dark-wood.png);
+    background-repeat: repeat;
+    
+    transform: rotate(90deg);
 }
 
 .shelf-middle {
@@ -365,6 +380,26 @@ body {
     width: 100%;
     height: 4%;
     background-color: rgb(124, 76, 39);
+    overflow: hidden;
+    background-position: center;
+}
+
+.shelf-middle::before {
+    content: "";
+    position: absolute;
+
+    top: -1500px;
+    left: -1500px;
+
+    width: 4000px;
+    height: 4000px;
+    
+    background-color: rgb(194, 114, 10);
+    background-image: url(textures/dark-wood.png);
+    background-repeat: repeat;
+    
+    /* Rotate the static box */
+    transform: rotate(90deg);
 }
 
 .shelf-wall-left {
@@ -373,21 +408,75 @@ body {
     bottom: 5%;
     right: 36%;
     width: 1.5%;
-    background-color: saddlebrown;
     z-index: 3;
+    overflow: hidden;
+}
+
+.shelf-wall-left::before {
+    content: "";
+    position: absolute;
+
+    top: -1500px;
+    left: -1500px;
+
+    width: 4000px;
+    height: 4000px;
+
+    background-color: rgb(255, 147, 7); 
+    background-image: url(textures/dark-wood.png);
+    background-repeat: repeat;
+
+    background-size: 50px;
+}
+
+.shelf-wall-left::after {
+    content: "";
+    position: absolute;
+    
+    inset: 0; 
+    
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.466) 5%, 
+        rgba(0, 0, 0, 0.151) 20%, 
+        rgba(0, 0, 0, 0) 50%, 
+        rgba(0, 0, 0, 0.007) 70%,
+        rgba(0, 0, 0, 0.377) 100%  
+    );
+    
+    mix-blend-mode: multiply;
 }
 
 .shelf-floor{
     position: absolute;
-    background-color: rgb(124, 76, 39);
     width: 100%;
     height: 4%;
     bottom: 0%;
+    overflow: hidden;
+}
+
+.shelf-floor::before{
+    content: "";
+    position: absolute;
+
+    top: -1500px;
+    left: -1500px;
+
+    width: 4000px;
+    height: 4000px;
+    
+    background-color: rgb(185, 105, 0);
+    background-image: url(textures/dark-wood.png);
+    background-repeat: repeat;
+    
+    transform: rotate(90deg);
 }
 
 .under-shelf-wall{
     position: absolute;
-    background-color: rgb(104, 72, 31);
+    background-color: rgb(71, 67, 62);
+    background: url(textures/3px-tile.png);
+
     width: 30%;
     height: 30%;
     bottom: 5%;
