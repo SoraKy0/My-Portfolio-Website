@@ -23,13 +23,14 @@ body {
 .cloud-one {
     position: absolute;
     top: 9%;         
-    left: 20%;        
     z-index: 0;       
     
     width: 200px;
     height: 60px;
     background-color: rgba(255, 255, 255, 0.651);
     border-radius: 100px; 
+
+    animation: float-clouds 40s linear infinite; 
 }
 
 .cloud-one::before,
@@ -57,13 +58,15 @@ body {
 .cloud-two {
     position: absolute;
     top: 4%;         
-    left: 50%;        
     z-index: 0;       
     
     width: 100px;
     height: 30px;
     background-color: rgba(255, 255, 255, 0.815);
     border-radius: 100px; 
+
+    animation: float-clouds 65s linear infinite;
+    animation-delay: -40s;
 }
 
 .cloud-two::before,
@@ -90,14 +93,16 @@ body {
 
 .cloud-three {
     position: absolute;
-    top: 10%;         
-    left: 90%;        
+    top: 6%;         
     z-index: 0;       
     
     width: 100px;
     height: 30px;
     background-color: rgba(255, 255, 255, 0.815);
     border-radius: 100px; 
+
+    animation: float-clouds 35s linear infinite;
+    animation-delay: -5s; 
 }
 
 
