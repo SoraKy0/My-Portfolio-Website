@@ -185,6 +185,35 @@ body {
     );
 }
 
+.stone-fence-head {
+    position: absolute;
+    bottom: 30vh;
+
+    width: 100vw;
+    height: 4vh;
+    background-color: #2b2b2b;
+
+    background-image: url(textures/double-lined.png);
+
+    background-size: 7%;
+        
+    box-shadow: 0 15px 9px rgba(0, 0, 0, 0.459), 0 2px 4px rgba(0, 0, 0, 0.589);
+
+    border-top: 2.5px solid #5e5e5e;
+}
+
+.stone-fence{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 30vh;
+    background-image: url(textures/texturize_brick_4_1024.png);
+    background-color: #b1b1b1;
+    background-size: 15%;
+
+    background-blend-mode: multiply;
+}
+
 .shop{
     display: flex;
     flex-direction: column; 
