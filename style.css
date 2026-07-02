@@ -490,7 +490,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    font-size: clamp(0.8rem, 2.2vw, 2.4rem); 
+    font-size: clamp(1rem, 2.5vw, 2.8rem); 
 }
 
 .banner-rope-one{
@@ -513,6 +513,59 @@ body {
     left: 45%;
     transform: translateX(-50%);
     z-index: 2;
+}
+
+.menu {
+    position: absolute;
+    bottom: 52.5%;
+    left: 8%;
+    z-index: 5;
+    width: clamp(35px, 5vw, 60px);
+    height: clamp(50px, 7vw, 80px);
+    background-color: #313131;
+    border: 4px solid rgb(104, 63, 31);
+    border-radius: 4px;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.menu::after {
+    content: '';
+    position: absolute;
+    top: 14%;
+    left: 15%;
+    right: 15%;
+    height: 65%;
+    
+    background-image:
+        linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.658)),
+        linear-gradient(rgba(255, 255, 255, 0.801), rgba(255, 255, 255, 0.137)),
+        linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
+        linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
+        linear-gradient(rgba(255, 255, 255, 0.795), rgba(255, 255, 255, 0.795));
+
+    background-repeat: no-repeat;
+
+    background-size:
+        55% 1.5px,
+        75% 1.5px,
+        40% 1.5px,
+        65% 1.5px,
+        50% 1.5px;
+
+    background-position:
+        40%  8%,
+        40%  26%,
+        40% 46%,
+        40%  66%,
+        40%  88%;
+}
+
+.menu:hover {
+    box-shadow:
+        inset 0 0 5px rgba(0, 0, 0, 0.6),
+        0 0 12px 4px rgba(255, 199, 79, 0.6);
+    transform: translateY(-2px);
 }
 
 .counter-topper{
@@ -703,12 +756,48 @@ body {
     background-repeat: repeat;
     
     transform: rotate(90deg);
+    
+}
+
+.shelf-row {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    z-index: 4;
+}
+
+.shelf-row-top {
+    top: 0;
+    height: 45%;
+}
+
+.shelf-row-bottom {
+    top: 49%;
+    bottom: 4%;
+}
+
+.project-slot {
+    width: 25%;
+    aspect-ratio: 1 / 1;
+    background-color: rgba(0, 94, 201, 0.205);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.1s ease, transform 0.2s ease;
+}
+
+.project-slot:hover {
+    background-color: rgba(0, 119, 255, 0.205);
+    transform: translateY(-5px);
 }
 
 .under-shelf-wall{
     position: absolute;
 
-    background-color: rgb(59, 59, 59);
+    background-color: rgb(48, 48, 48);
 
     background-image: url(textures/concrete-wall-3.png); 
     background-size: 300px; 
@@ -718,6 +807,19 @@ body {
     bottom: 5%;
     right: 6%;
     z-index: 2;
+}
+
+.under-shelf-wall::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.637) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
 }
 
 .cat{
@@ -768,7 +870,7 @@ body {
   z-index: 2;
   
   filter:
-    drop-shadow(0 0 15px rgba(255, 244, 183, 0.788))
+    drop-shadow(0 0 15px rgba(255, 244, 183, 0.705))
     drop-shadow(0 0 40px rgba(247, 171, 57, 0.658));
 }
 
@@ -780,7 +882,7 @@ body {
 
   background: linear-gradient(
     to bottom,
-    rgba(255, 235, 197, 0.747) 0%,
+    rgba(255, 235, 197, 0.685) 0%,
     rgba(255, 166, 0, 0.281) 20%,
     rgba(255, 166, 0, 0.199) 60%,
     rgba(255, 166, 0, 0.021) 100% 
