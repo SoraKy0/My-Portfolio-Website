@@ -527,7 +527,7 @@ body {
     border-radius: 4px;
     box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.6);
     cursor: pointer;
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    transition: box-shadow 0.2s ease;
 }
 .menu::after {
     content: '';
@@ -565,8 +565,55 @@ body {
     box-shadow:
         inset 0 0 5px rgba(0, 0, 0, 0.6),
         0 0 12px 4px rgba(255, 199, 79, 0.6);
-    transform: translateY(-2px);
 }
+
+.bell {
+    position: absolute;
+    bottom: 53.2%;
+    left: 19%;
+    transform: translateX(-50%);
+    z-index: 5;
+
+    width: clamp(20px, 3vw, 35px);
+    height: clamp(7px, 1.5vw, 17px);
+
+    background-color: rgb(255, 187, 0);
+    border-radius: 90% 90% 0 0;
+
+    cursor: pointer;
+
+    transition: box-shadow 0.2s ease;
+}
+
+.bell::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 5px;
+    background-color: rgb(114, 70, 29);
+    border-radius: 2px;
+}
+
+.bell::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: rgb(182, 182, 182);
+    border-radius: 40%;
+}
+
+.bell:hover {
+    box-shadow:
+        0 0 12px 4px rgba(255, 199, 79, 0.6);
+}
+
 
 .counter-topper{
     position: absolute;
