@@ -126,10 +126,78 @@ body {
     border-radius: 100px; 
 
     animation: float-clouds 25s linear infinite;
+    animation-delay: -1s; 
+}
+
+.cloud-small-1 {
+    position: absolute;
+    top: 56%;         
+    z-index: 0;       
+    
+    width: 20px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.815);
+    border-radius: 100px; 
+
+    animation: float-clouds 20s linear infinite;
     animation-delay: -5s; 
 }
 
+.cloud-small-2 {
+    position: absolute;
+    top: 45%;         
+    z-index: 0;       
+    
+    width: 50px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.815);
+    border-radius: 100px; 
 
+    animation: float-clouds 17s linear infinite;
+    animation-delay: -10s; 
+}
+
+.cloud-small-3 {
+    position: absolute;
+    top: 55%;         
+    z-index: 0;       
+    
+    width: 50px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.815);
+    border-radius: 100px; 
+
+    animation: float-clouds 15s linear infinite;
+    animation-delay: -30s; 
+}
+
+.cloud-small-4 {
+    position: absolute;
+    top: 52%;         
+    z-index: 0;       
+    
+    width: 50px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.815);
+    border-radius: 100px; 
+
+    animation: float-clouds 22s linear infinite;
+    animation-delay: -30s; 
+}
+
+.cloud-small-5 {
+    position: absolute;
+    top: 50%;         
+    z-index: 0;       
+    
+    width: 40px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.815);
+    border-radius: 100px; 
+
+    animation: float-clouds 15s linear infinite;
+    animation-delay: -25s; 
+}
 
 
 .hill-left {
@@ -300,13 +368,60 @@ body {
     position: relative;
 }
 
-.back-wall{
+.back-wall {
     width: 100%;
     height: 100%;
     background-color: rgb(148, 122, 88);
     background-image: url(textures/dimension.png);
     position: absolute;
     z-index: 1;
+
+    -webkit-mask-image: radial-gradient(circle at 28% 35%, transparent 79px, black 91px);
+    mask-image: radial-gradient(circle at 28% 35%, transparent 79px, black 91px);
+}
+
+.window-frame {
+    position: absolute;
+    z-index: 2;
+
+    width: 180px;  
+    height: 180px; 
+    
+    left: calc(28% - 90px);
+    top: calc(35% - 90px);
+
+    border-radius: 50%;
+    border: 8px solid rgb(94, 59, 26);
+    background-size: 200px;
+    box-sizing: border-box;
+
+    box-shadow: 
+        0 4px 10px rgba(0, 0, 0, 0.5), 
+        inset 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.window-frame::before,
+.window-frame::after {
+    content: '';
+    position: absolute;
+    background-color: rgb(94, 59, 26);
+    z-index: 1;
+}
+
+.window-frame::before {
+    width: clamp(4px, 0.5vw, 6px);
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.window-frame::after {
+    width: 100%;
+    height: clamp(4px, 0.5vw, 6px);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
 }
 
 .left-wall {
