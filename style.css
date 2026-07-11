@@ -1035,16 +1035,40 @@ body {
     z-index: 1;
 }
 
-.cat{
-    /*Temp placeholder for cat "mew"*/
+.rimuru_tempest_slime{
     position: absolute;
-    background-color: rgb(0, 225, 255);
-    width: 10%;
-    height: 10%;
-    bottom: 5%;
+
+    width: 12%;
+    height: 13%;
+    bottom: 4%;
     right: 16%;
-    z-index: 3;
+
+    border-radius: 60% 60% / 80% 80% 50% 50%;
+    background-color: rgb(0, 204, 255);
+
+    transform: scale(1.05, 0.95);    
+    z-index: 2;
 }
+
+.eye1, .eye2 {
+    position: absolute;
+    top: 45%;
+    width: 15%;
+    height: 5%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+.eye1 {
+    left: 22%;
+    transform: rotate(5deg);
+}
+
+.eye2 {
+    right: 22%;
+    transform: rotate(-5deg);
+}
+
 
 .light-wire{
     position: absolute;
