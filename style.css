@@ -1038,16 +1038,32 @@ body {
 .rimuru_tempest_slime{
     position: absolute;
 
-    width: 12%;
-    height: 13%;
-    bottom: 4%;
+    width: 11%;
+    height: 15%;
+    bottom: 4.6%;
     right: 16%;
 
-    border-radius: 60% 60% / 80% 80% 50% 50%;
-    background-color: rgb(0, 204, 255);
+    border-radius: 60% 60% 60% 60% / 80% 80% 50% 50%;
+    background-color: rgb(56, 215, 255);
+    transform: scale(1, 0.95);    
+    z-index: 3;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
 
-    transform: scale(1.05, 0.95);    
-    z-index: 2;
+.rimuru_tempest_slime:hover {
+    box-shadow: 
+        0 0 20px 3px rgba(56, 215, 255, 0.678),
+        0 0 50px 12px rgba(28, 134, 255, 0.445);
+
+    animation: slime-ani 1.4s ease;
+}
+
+@keyframes slime-ani {
+    20%  { transform: scale(1, 0.7)  translateY(20%); }  /*Start*/
+    50%  { transform: scale(0.8, 1.4)  translateY(-50%); }
+    70%  { transform: scale(1, 0.5)  translateY(38%); }
+    100% { transform: scale(1, 0.95)     translateY(0); } /*End animation*/
 }
 
 .eye1, .eye2 {
@@ -1094,7 +1110,6 @@ body {
     z-index: 3;
 }
 
-  /*PLEASE LEARN HOW THIS WORKS LATER :)*/
 .light-rays {
   --ray-spread: clamp(70px, 40vw, 320px);
   --ray-top-width: clamp(20px, 5vw, 100px);
