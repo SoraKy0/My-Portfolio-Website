@@ -717,31 +717,36 @@ body {
     transition: box-shadow 0.2s ease;
 }
 
-.menu::before {
-    content: "My GitHub";
+.popup {
     position: absolute;
-    
-    bottom: 115%;
+    bottom: 170%;
     left: 50%;
-    
-    transform: translateX(-50%) translateY(30px); 
-    
-    background-color: #101411;
+    transform: translateX(-50%) translateY(15px);
+
+    background: #101411;
     color: #F2F5F3;
+
     padding: 5px 10px;
     border-radius: 10px;
+
     font-size: 14px;
     font-optical-sizing: auto;
     font-family: "Roboto Mono", monospace;
     font-weight: 450;
     font-style: normal;
+
     white-space: nowrap;
-    box-shadow: 0 9px 6px rgba(0, 0, 0, 0.363);
-    z-index: 10;
-    
+    box-shadow: 0 9px 6px rgba(0, 0, 0, 0.36);
+
     opacity: 0;
-    
-    transition: all 0.4s ease;
+    pointer-events: none;
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.bell.show .popup {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
 
 .bell::before {
