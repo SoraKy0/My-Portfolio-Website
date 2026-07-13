@@ -372,8 +372,7 @@ body {
 .back-wall {
     width: 100%;
     height: 100%;
-    background-color: rgb(148, 122, 88);
-    background-image: url(textures/dimension.png);
+    background-color: rgb(148, 122, 88); 
     position: absolute;
     z-index: 1;
 
@@ -653,28 +652,10 @@ body {
     right: 15%;
     height: 65%;
     
-    background-image:
-        linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.658)),
-        linear-gradient(rgba(255, 255, 255, 0.801), rgba(255, 255, 255, 0.137)),
-        linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
-        linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
-        linear-gradient(rgba(255, 255, 255, 0.795), rgba(255, 255, 255, 0.795));
-
+    background-image: url("assets/mark-github-24.svg");
     background-repeat: no-repeat;
-
-    background-size:
-        55% 1.5px,
-        75% 1.5px,
-        40% 1.5px,
-        65% 1.5px,
-        50% 1.5px;
-
-    background-position:
-        40%  8%,
-        40%  26%,
-        40% 46%,
-        40%  66%,
-        40%  88%;
+    background-position: center;
+    background-size: contain;
 }
 
 .menu:hover {
