@@ -866,7 +866,7 @@ body {
     pointer-events: auto;
     transform: translate(-50%, calc(-100% - 20px)) translateY(0) scale(1);
 }
-/*gitpush thing*/
+
 .receipt-popup::before {
     display: block;
     white-space: pre;
