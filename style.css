@@ -960,7 +960,6 @@ body {
     overflow: hidden;
 }
 
-/*Understand how the before/after and all other stuff works*/
 .projects-shelf::before {
     content: "";
     position: absolute;
@@ -1003,7 +1002,6 @@ body {
     background-image: url(textures/dark-wood.png);
     background-repeat: repeat;
     
-    /* Rotate the static box */
     transform: rotate(90deg);
 }
 
@@ -1111,6 +1109,63 @@ body {
 .project-slot:hover {
     background-color: rgba(0, 119, 255, 0.205);
     transform: translateY(-5px);
+}
+
+.project-window-card {
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+    background-color: rgba(39, 39, 39, 0.637);
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.logo {
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    left: 90%;
+    top: 10%;
+    border: 3px solid black;
+    border-radius: 10%;
+}
+
+.title {
+    width: 70%;
+    height: 5%;
+    position: absolute;
+    right: 15%;
+    top: 10%;
+    border: 3px solid black;
+    border-radius: 10%;
+}
+
+.github-link {
+    width: 80%;
+    height: 5%;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 15%;
+    border: 3px solid black;
+    border-radius: 10%;
+}
+
+.description {
+    width: 90%;
+    height: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 30%;
+    border: 3px solid black;
+    border-radius: 10%;
+}
+
+.exit-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.253);
 }
 
 .under-shelf-wall{
