@@ -14,6 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000);
     });
 
+    const slimeButton = document.getElementById("slime-button");
+
+    slimeButton.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+
+        slimeButton.classList.toggle("clicked");
+    });
+
+    document.addEventListener("click", () => {
+        slimeButton.classList.remove("clicked");
+    });
+
 
     const tillButton = document.getElementById("till-button");
     const receipt = document.querySelector(".receipt-popup");
