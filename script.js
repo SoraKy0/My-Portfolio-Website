@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         bellSound.play();
 
         bellButton.classList.add("show");
-
+        void bellButton.offsetWidth; 
         setTimeout(() => {
             bellButton.classList.remove("show");
         }, 2000);

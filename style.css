@@ -6,7 +6,7 @@ body {
         rgb(84, 170, 228) 50%,
         rgb(80, 151, 212)  100%
     );
-    
+    overflow: hidden;
 }
 
 .background {
