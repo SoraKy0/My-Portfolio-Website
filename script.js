@@ -15,11 +15,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const slimeButton = document.getElementById("slime-button");
+    const slimeSound = document.getElementById("slime-sound");
 
     slimeButton.addEventListener("click", (event) => {
         event.stopPropagation(); 
+        
+        slimeButton.classList.remove("clicked");
+        
+        void slimeButton.offsetWidth; 
+        
+        slimeButton.classList.add("clicked");
+        
+        slimeSound.currentTime = 0;
+        slimeSound.play();
+    });
 
-        slimeButton.classList.toggle("clicked");
+    slimeButton.addEventListener("animationend", () => {
+        slimeButton.classList.remove("clicked");
     });
 
     document.addEventListener("click", () => {

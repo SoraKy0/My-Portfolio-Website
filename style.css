@@ -6,6 +6,7 @@ body {
         rgb(84, 170, 228) 50%,
         rgb(80, 151, 212)  100%
     );
+    
 }
 
 .background {
@@ -875,7 +876,7 @@ body {
         "     |RANDOM FACTS ABOUT ME|    \A "
         "--------------------------------\A "
         "Hobby:        Building Computers\A "
-        "Fav Game Genre:       Soulsborne\A "
+        "Fav Game Genre:       SOULS-LIKE\A "
         "Fav Char:      Tony Tony Chopper\A "
         "Dislikes: All Sauces and vinegar\A "
         "--------------------------------\A "
@@ -1275,15 +1276,15 @@ body {
 
 .rimuru_tempest_slime.clicked {
 
-    animation: slime-ani 1.2s ease;
+    animation: slime-ani 0.8s ease;
 }
 
-.rimuru_tempest_slime:hover{
+.rimuru_tempest_slime:hover {
     box-shadow: 
         inset -4px -8px 12px rgba(0, 67, 145, 0.521), 
         inset 4px 4px 8px rgba(255, 255, 255, 0.308),
         0 0 20px 3px rgba(56, 215, 255, 0.678),
-        0 0 50px 12px rgba(28, 134, 255, 0.445);
+        0 0 50px 12px rgba(28, 134, 255, 0.445)
 }
 
 @keyframes slime-ani {
@@ -1310,6 +1311,19 @@ body {
 .eye2 {
     right: 22%;
     transform: rotate(-5deg);
+}
+
+.mouth {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mouth::before {
+    content: "︿";
+    font-size: 18px;
+    color: #071624;
 }
 
 
