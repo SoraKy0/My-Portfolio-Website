@@ -1099,7 +1099,7 @@ body {
 .project-slot {
     width: 25%;
     aspect-ratio: 1 / 1;
-    background-color: rgba(0, 94, 201, 0.205); 
+    background-color: rgba(26, 23, 245, 0.253); 
     border: 1px solid rgb(255, 255, 255);
     border-radius: 4px;
     cursor: pointer;
@@ -1107,65 +1107,115 @@ body {
 }
 
 .project-slot:hover {
-    background-color: rgba(0, 119, 255, 0.205);
+    background-color: rgba(0, 47, 255, 0.253); 
     transform: translateY(-5px);
 }
 
 .project-window-card {
-    width: 90%;
-    height: 90%;
-    margin: 5%;
-    background-color: rgba(39, 39, 39, 0.637);
+    position: absolute; 
+    z-index: 10;
+    width: 80%;
+    height: 82%;
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    background-color: rgba(23, 8, 36, 0.808);
+
     border-radius: 10px;
     opacity: 0;
     pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.project-window {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.project-window-card.active {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .logo {
-    width: 10%;
-    height: 10%;
     position: absolute;
-    left: 90%;
-    top: 10%;
+    width: 5vw;
+    height: 10vh;
+    left: 2%;
+    top: 3%;
     border: 3px solid black;
-    border-radius: 10%;
+    border-radius: 10px;
 }
 
 .title {
-    width: 70%;
-    height: 5%;
     position: absolute;
-    right: 15%;
-    top: 10%;
+    width: 70%;
+    height: 6%;
+    left: 14%;
+    top: 3%;
+    background-color: #fffdfd70;
     border: 3px solid black;
-    border-radius: 10%;
+    border-radius: 10px;
 }
 
 .github-link {
+    position: absolute;
     width: 80%;
     height: 5%;
-    position: absolute;
+    left: 50%;
     transform: translateX(-50%);
-    top: 15%;
+    top: 22%;
+    background-color: #fffdfd70;
     border: 3px solid black;
-    border-radius: 10%;
+    border-radius: 10px;
 }
 
 .description {
+    position: absolute;
     width: 90%;
     height: 50%;
-    position: absolute;
+    left: 50%;
     transform: translateX(-50%);
-    top: 30%;
+    top: 40%;
+    background-color: #fffdfd70;
     border: 3px solid black;
-    border-radius: 10%;
+    border-radius: 10px;
 }
 
 .exit-button {
-    width: 100px;
-    height: 100px;
+    text-align: center;
+    position: absolute;
+    width: 30px; 
+    height: 30px; 
+    right: 3%;
+    top: 3%;
     border-radius: 50%;
-    background-color: rgba(255, 0, 0, 0.253);
+    background-color: rgba(255, 0, 0, 0.822);
+    border: none;
+    cursor: pointer;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.2s ease;
+}
+
+.exit-button::before {
+    content: "";
+    display: block;
+    width: 10px; 
+    height: 10px; 
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+.exit-button:hover {
+    background-color: rgba(255, 100, 100, 0.25);
+    transform: scale(1.3);
 }
 
 .under-shelf-wall{
