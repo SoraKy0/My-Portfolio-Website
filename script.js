@@ -41,9 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const tillButton = document.getElementById("till-button");
     const receipt = document.querySelector(".receipt-popup");
+    const tillsound = document.getElementById("till-sound");
 
     tillButton.addEventListener("click", (event) => {
-
+        tillsound.currentTime = 0;
+        tillsound.play();
         event.stopPropagation(); 
         tillButton.classList.toggle("show");
     });
@@ -51,6 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener("click", () => {
         tillButton.classList.remove("show");
     });
+
+    const githubsound = document.getElementById("github-sound");
 
 
     const projectSlots = document.querySelectorAll('.project-slot');
@@ -89,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const toggleDarkMode = (event) => {
         event.stopPropagation();
-
+        lightsound.volume = 0.4; 
         lightsound.currentTime = 0;
         lightsound.play();
 
