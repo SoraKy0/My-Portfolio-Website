@@ -83,13 +83,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const topLight = document.querySelector('.light');
     const floorLamp = document.querySelector('.lantern');
+    const lightsound = document.getElementById("light-sound")
 
     const body = document.body;
 
     const toggleDarkMode = (event) => {
         event.stopPropagation();
+
+        lightsound.currentTime = 0;
+        lightsound.play();
+
         body.classList.toggle('dark-mode');
-        
     };
 
     topLight.addEventListener('click', toggleDarkMode);
