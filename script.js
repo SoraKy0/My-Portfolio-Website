@@ -54,7 +54,14 @@ document.addEventListener('DOMContentLoaded', () => {
         tillButton.classList.remove("show");
     });
 
-    const githubsound = document.getElementById("github-sound");
+    const githubButton = document.getElementById("github-button");
+    const githubSound = document.getElementById("github-sound");
+
+    githubButton.addEventListener("click", () => {
+        githubSound.currentTime = 0;
+        githubSound.play();
+    });
+
 
 
     const projectSlots = document.querySelectorAll('.project-slot');
