@@ -9,17 +9,34 @@ body {
     overflow: hidden;
 }
 
+
 .sun, .cloud-one, .cloud-two, .cloud-three, 
 .cloud-small-1, .cloud-small-2, .cloud-small-3, 
 .cloud-small-4, .cloud-small-5 {
     transition: background-color 0.8s ease, box-shadow 0.8s ease;
 }
 
+.cloud-one::before, .cloud-one::after, 
+.cloud-two::before, .cloud-two::after {
+    transition: background-color 0.8s ease;
+}
+
+.lamp {
+    transition: box-shadow 0.8s ease;
+}
+
 .light, .lantern {
     cursor: pointer;
 }
 
-body.dark-mode {
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    
     background: radial-gradient(
         circle 70vmax at 95% 10%,
         rgb(18, 24, 43) 0%,
@@ -27,7 +44,15 @@ body.dark-mode {
         rgb(12, 19, 36) 50%,
         rgb(5, 9, 20) 100%
     );
+    
+    opacity: 0;
+    transition: opacity 0.8s ease;
 }
+
+body.dark-mode::before {
+    opacity: 1; 
+}
+
 
 body.dark-mode .sun {
     background-color: rgb(240, 240, 255);
@@ -63,14 +88,8 @@ body.dark-mode .lamp {
         0 0 150px 80px rgba(255, 175, 3, 0.4); 
 }
 
-body.dark-mode .light-rays::before {
-    background: linear-gradient(
-        to bottom,
-        rgba(255, 235, 197, 0.85) 0%,
-        rgba(255, 166, 0, 0.45) 20%,
-        rgba(255, 166, 0, 0.3) 60%,
-        rgba(255, 166, 0, 0.05) 100% 
-    );
+body.dark-mode .light-rays {
+    opacity: 1;
 }
 
 .background {
@@ -1418,19 +1437,22 @@ body.dark-mode .light-rays::before {
 }
 
 .light-rays {
-  --ray-spread: clamp(70px, 40vw, 320px);
-  --ray-top-width: clamp(20px, 5vw, 100px);
-  position: absolute;
-  width: calc(var(--ray-spread) * 2 + var(--ray-top-width));
-  top: 6%;
-  bottom: 0;
-  left: 55%;
-  transform: translateX(-50%);
-  z-index: 2;
-  
-  filter:
+    --ray-spread: clamp(70px, 40vw, 320px);
+    --ray-top-width: clamp(20px, 5vw, 100px);
+    position: absolute;
+    width: calc(var(--ray-spread) * 2 + var(--ray-top-width));
+    top: 6%;
+    bottom: 0;
+    left: 55%;
+    transform: translateX(-50%);
+    z-index: 2;
+
+    filter:
     drop-shadow(0 0 15px rgba(255, 244, 183, 0.705))
     drop-shadow(0 0 40px rgba(247, 171, 57, 0.658));
+
+    opacity: 0.7;
+    transition: opacity 0.8s ease;
 }
 
 .light-rays::before {
@@ -1441,9 +1463,9 @@ body.dark-mode .light-rays::before {
 
   background: linear-gradient(
     to bottom,
-    rgba(255, 235, 197, 0.76) 0%,
+    rgba(255, 235, 197, 0.863) 0%,
     rgba(204, 133, 0, 0.61) 20%,
-    rgba(218, 141, 0, 0.199) 60%,
+    rgba(255, 166, 0, 0.164) 60%,
     rgba(0, 0, 0, 0.021) 100% 
   );
   
