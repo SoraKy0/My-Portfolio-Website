@@ -9,6 +9,70 @@ body {
     overflow: hidden;
 }
 
+.sun, .cloud-one, .cloud-two, .cloud-three, 
+.cloud-small-1, .cloud-small-2, .cloud-small-3, 
+.cloud-small-4, .cloud-small-5 {
+    transition: background-color 0.8s ease, box-shadow 0.8s ease;
+}
+
+.light, .lantern {
+    cursor: pointer;
+}
+
+body.dark-mode {
+    background: radial-gradient(
+        circle 70vmax at 95% 10%,
+        rgb(18, 24, 43) 0%,
+        rgba(21, 28, 54, 0.911) 30%,
+        rgb(12, 19, 36) 50%,
+        rgb(5, 9, 20) 100%
+    );
+}
+
+body.dark-mode .sun {
+    background-color: rgb(240, 240, 255);
+    box-shadow:
+        0 0 20px  10px  rgba(255, 255, 255, 0.6),
+        0 0 60px  30px  rgba(40, 40, 58, 0.3),
+        0 0 120px 60px  rgba(100, 100, 255, 0.1),
+        0 0 200px 100px rgba(50, 50, 255, 0.05);
+}
+
+body.dark-mode .cloud-one,
+body.dark-mode .cloud-two,
+body.dark-mode .cloud-three,
+body.dark-mode .cloud-small-1,
+body.dark-mode .cloud-small-2,
+body.dark-mode .cloud-small-3,
+body.dark-mode .cloud-small-4,
+body.dark-mode .cloud-small-5 {
+    background-color: rgba(122, 131, 148, 0.8);
+}
+
+body.dark-mode .cloud-one::before,
+body.dark-mode .cloud-one::after,
+body.dark-mode .cloud-two::before,
+body.dark-mode .cloud-two::after {
+    background-color: rgba(92, 98, 109, 0.9);
+}
+
+body.dark-mode .lamp {
+    box-shadow: 
+        0 0 30px  15px rgba(255, 238, 202, 0.9), 
+        0 0 80px  40px rgba(255, 175, 3, 0.7),
+        0 0 150px 80px rgba(255, 175, 3, 0.4); 
+}
+
+body.dark-mode .light-rays::before {
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 235, 197, 0.85) 0%,
+        rgba(255, 166, 0, 0.45) 20%,
+        rgba(255, 166, 0, 0.3) 60%,
+        rgba(255, 166, 0, 0.05) 100% 
+    );
+}
+
 .background {
     position: fixed;
     inset: 0;
@@ -539,11 +603,12 @@ body {
     width: 75%;
     height: 22%;
     background-color: rgb(253, 225, 164);
+    border-radius: 0 0 5px 5px;
     bottom: 70%;
     left: 50%;
     transform: translateX(-50%);
     box-shadow: 
-        0 0 20px  10px rgba(255, 238, 202, 0.938), 
+        0 0 20px  10px rgba(255, 238, 202, 0.199), 
         0 0 60px  30px rgba(255, 175, 3, 0.5),
         0 0 120px 60px rgba(255, 175, 3, 0.363); 
 }
@@ -1100,7 +1165,7 @@ body {
 .project-slot {
     width: 25%;
     aspect-ratio: 1 / 1;
-    background-color: rgba(26, 23, 245, 0.253); 
+    background-color: rgba(160, 108, 172, 0.5); 
     border: 1px solid rgb(255, 255, 255);
     border-radius: 4px;
     cursor: pointer;
@@ -1108,7 +1173,7 @@ body {
 }
 
 .project-slot:hover {
-    background-color: rgba(0, 47, 255, 0.253); 
+    background-color: rgba(237, 159, 255, 0.5); 
     transform: translateY(-5px);
 }
 
@@ -1121,7 +1186,8 @@ body {
     left: 50%;
     transform: translateX(-50%);
     
-    background-color: rgba(23, 8, 36, 0.808);
+    background-color: rgba(0, 173, 107, 0.808);
+    border: 3px solid rgb(252, 252, 252);
 
     border-radius: 10px;
     opacity: 0;
@@ -1344,7 +1410,7 @@ body {
     height: 0;
     border-left: clamp(10px, 3.5vw, 55px) solid transparent;
     border-right: clamp(8px, 3.5vw, 55px) solid transparent;
-    border-bottom: clamp(10px, 4.5vw, 40px) solid #ff0000;
+    border-bottom: clamp(10px, 4.5vw, 40px) solid #ff9100;
     top: 4%;
     left: 55%;
     transform: translateX(-50%);
@@ -1375,10 +1441,10 @@ body {
 
   background: linear-gradient(
     to bottom,
-    rgba(255, 235, 197, 0.685) 0%,
-    rgba(255, 166, 0, 0.281) 20%,
-    rgba(255, 166, 0, 0.199) 60%,
-    rgba(255, 166, 0, 0.021) 100% 
+    rgba(255, 235, 197, 0.76) 0%,
+    rgba(204, 133, 0, 0.61) 20%,
+    rgba(218, 141, 0, 0.199) 60%,
+    rgba(0, 0, 0, 0.021) 100% 
   );
   
   clip-path: polygon(

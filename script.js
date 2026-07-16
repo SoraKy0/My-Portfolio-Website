@@ -81,4 +81,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    const topLight = document.querySelector('.light');
+    const floorLamp = document.querySelector('.lantern');
+
+    const body = document.body;
+
+    const toggleDarkMode = (event) => {
+        event.stopPropagation();
+        body.classList.toggle('dark-mode');
+        
+    };
+
+    topLight.addEventListener('click', toggleDarkMode);
+    floorLamp.addEventListener('click', toggleDarkMode);
+
 });
