@@ -96,3 +96,22 @@ document.addEventListener('DOMContentLoaded', () => {
     floorLamp.addEventListener('click', toggleDarkMode);
 
 });
+
+    const hoverSound = document.getElementById("hover-sound");
+    const projectSlots = document.querySelectorAll('.project-slot');
+
+    projectSlots.forEach(slot => {
+        slot.addEventListener('mouseenter', () => {
+
+            const soundClone = hoverSound.cloneNode(true);
+            
+            soundClone.volume = 0.3; 
+            
+            soundClone.play().catch(error => {
+            });
+
+            soundClone.addEventListener('ended', () => {
+                soundClone.remove();
+            });
+        });
+    });
