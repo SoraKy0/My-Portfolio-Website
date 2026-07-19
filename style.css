@@ -319,12 +319,12 @@ body.dark-mode .light-rays {
 
 .hill-left {
     position: absolute;
-    width: clamp(400px, 42vw, 800px);
-    height: clamp(1000px, 105vw, 2000px);
+    width: 70%;
+    height: 200%;
     background-color: rgb(6, 58, 5);
     background-image: url(textures/redox-02.png);
     border-radius: 50%;
-    top: 7%;
+    top: 10%;
     left: 1%;
     transform: translateX(-50%);
     overflow: hidden;
@@ -346,13 +346,13 @@ body.dark-mode .light-rays {
 
 .hill-right {
     position: absolute;
-    width: clamp(600px, 62vw, 1200px);
-    height: clamp(1300px, 120vw, 2200px);
+    width: 62%;
+    height: 200%;
     background-color: rgb(7, 82, 6);
     background-image: url(textures/redox-02.png);
     border-radius: 50%;
-    top: 1%;
-    right: 20%;
+    top: 5%;
+    right: 17%;
     transform: translateX(50%);
     overflow: hidden;
 }
