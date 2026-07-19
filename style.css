@@ -53,6 +53,38 @@ body.dark-mode::before {
     opacity: 1; 
 }
 
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    
+    background-image:
+        radial-gradient(5px 5px at 14px 32px, white 5%, rgba(255, 255, 255, 0.8) 30%, transparent 80%),
+        radial-gradient(6px 6px at 73px 18px, white 5%, rgba(255, 255, 255, 0.95) 30%, transparent 80%),
+        radial-gradient(5px 5px at 296px 41px, white 5%, rgba(255, 255, 255, 0.7) 30%, transparent 80%),
+        radial-gradient(6px 6px at 221px 134px, white 5%, rgba(255, 255, 255, 0.85) 30%, transparent 80%),
+        
+        radial-gradient(4px 4px at 126px 54px, white 10%, rgba(255, 255, 255, 0.5) 40%, transparent 80%),
+        radial-gradient(4px 4px at 184px 23px, white 10%, rgba(255, 255, 255, 0.6) 40%, transparent 80%),
+        radial-gradient(4px 4px at 112px 121px, white 10%, rgba(255, 255, 255, 0.6) 40%, transparent 80%),
+        radial-gradient(3px 3px at 242px 76px, white 10%, rgba(255, 255, 255, 0.5) 40%, transparent 80%),
+        
+        radial-gradient(3px 3px at 48px 96px, white 10%, rgba(255, 255, 255, 0.4) 40%, transparent 80%),
+        radial-gradient(2.5px 2.5px at 165px 88px, white 10%, rgba(255, 255, 255, 0.3) 40%, transparent 80%),
+        radial-gradient(3px 3px at 279px 112px, white 10%, rgba(255, 255, 255, 0.4) 40%, transparent 80%);
+    
+
+    background-size: 360px 180px;
+}
+
+body.dark-mode::after {
+    opacity: 1; 
+}
 
 body.dark-mode .sun {
     background-color: rgb(240, 240, 255);
