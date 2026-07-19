@@ -666,6 +666,46 @@ body.dark-mode .light-rays {
     border-bottom: clamp(12px, 2vw, 22px) solid rgb(60, 40, 20);
 }
 
+.lamp-roof::before,
+.lamp-roof::after {
+    content: '';
+    position: absolute;
+    top: clamp(2px, 1.5vw, 10px); 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 20px;
+    height: 18px;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    
+    z-index: 5;
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+}
+
+.lamp-roof::after {
+    background-image: url("assets/moon.svg");
+    opacity: 1;
+    filter: brightness(0) invert(1);
+}
+
+.lamp-roof::before {
+    background-image: url("assets/sun.svg");
+    opacity: 0;
+    filter: brightness(0) invert(1);
+}
+
+body.dark-mode .lamp-roof::after {
+    opacity: 0;
+}
+
+body.dark-mode .lamp-roof::before {
+    opacity: 1;
+}
+
 .shop-banner{
     position: absolute;
     background-color: rgb(204, 135, 71);
@@ -1205,7 +1245,7 @@ body.dark-mode .light-rays {
     left: 50%;
     transform: translateX(-50%);
     
-    background-color: rgba(0, 173, 107, 0.808);
+    background-color: rgba(247, 153, 239, 0.808);
     border: 3px solid rgb(252, 252, 252);
 
     border-radius: 10px;
@@ -1475,6 +1515,45 @@ body.dark-mode .light-rays {
     100% 100%,
     0 100%
   );
+}
+
+.light::before,
+.light::after {
+    content: '';
+    position: absolute;
+    
+    top: clamp(2px, 1.5vw, 8px); 
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: clamp(12px, 2.5vw, 25px);
+    height: clamp(12px, 2.5vw, 25px);
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    
+    z-index: 5;
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+}
+
+.light::after {
+    background-image: url("assets/moon.svg");
+    opacity: 1;
+}
+
+.light::before {
+    background-image: url("assets/sun.svg");
+    opacity: 0;
+}
+
+body.dark-mode .light::after {
+    opacity: 0;
+}
+
+body.dark-mode .light::before {
+    opacity: 1;
 }
 
 @keyframes float-clouds {
