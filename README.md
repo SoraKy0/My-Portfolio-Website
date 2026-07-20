@@ -2,6 +2,10 @@
 
 An interactive personal portfolio site styled as a traditional Japanese shop.
 
+<p align="center">
+  <img src="assets/ShopScreenshot.png" alt="Site Preview" width="600">
+</p>
+
 ## Live Site
 
 
