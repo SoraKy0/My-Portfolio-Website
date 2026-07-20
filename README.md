@@ -8,7 +8,7 @@ An interactive personal portfolio site styled as a traditional Japanese shop.
 
 ## Live Site
 
-[GO TO SITE]((https://soraky0.github.io/My-Portfolio-Website/))
+[GO TO SITE](https://soraky0.github.io/My-Portfolio-Website/)
 
 ## About
 
