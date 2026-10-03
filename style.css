@@ -1393,7 +1393,8 @@ body.dark-mode .lamp-roof::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;     
+    text-align: center;
+    font-family: "Roboto Slab", serif;     
        
 }
 
@@ -1447,6 +1448,7 @@ body.dark-mode .lamp-roof::before {
     font-size: 2rem;
     font-weight: 1000;
     color: #00ffa2;
+    font-family: "Roboto Slab", serif;
 }
 
 .title {
@@ -1463,6 +1465,7 @@ body.dark-mode .lamp-roof::before {
     align-items: center;
     font-size: 2rem;
     font-weight: 1000;
+    font-family: "Roboto Slab", serif;
 }
 
 .github-link {
@@ -1478,6 +1481,7 @@ body.dark-mode .lamp-roof::before {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Roboto Slab", serif;
 }
 
 .description {
@@ -1493,6 +1497,7 @@ body.dark-mode .lamp-roof::before {
     font-size: 1.3rem;
     font-weight: 700;
     text-align: center;
+    font-family: "Roboto Slab", serif;
     
 }
 
