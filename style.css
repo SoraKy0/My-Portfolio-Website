@@ -1390,6 +1390,11 @@ body.dark-mode .lamp-roof::before {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.1s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;     
+       
 }
 
 .project-slot:hover {
@@ -1406,13 +1411,14 @@ body.dark-mode .lamp-roof::before {
     left: 50%;
     transform: translateX(-50%);
     
-    background-color: rgba(247, 153, 239, 0.808);
+    background-color: rgba(153, 156, 247, 0.94);
     border: 3px solid rgb(252, 252, 252);
 
     border-radius: 10px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
+    
 }
 
 .project-window {
@@ -1435,6 +1441,12 @@ body.dark-mode .lamp-roof::before {
     top: 3%;
     border: 3px solid black;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 1000;
+    color: #00ffa2;
 }
 
 .title {
@@ -1446,6 +1458,11 @@ body.dark-mode .lamp-roof::before {
     background-color: #fffdfd70;
     border: 3px solid black;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 1000;
 }
 
 .github-link {
@@ -1458,18 +1475,25 @@ body.dark-mode .lamp-roof::before {
     background-color: #fffdfd70;
     border: 3px solid black;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .description {
     position: absolute;
     width: 90%;
-    height: 50%;
+    height: 57%;
     left: 50%;
     transform: translateX(-50%);
-    top: 40%;
+    top: 36%;
     background-color: #fffdfd70;
     border: 3px solid black;
     border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    
 }
 
 .exit-button {
